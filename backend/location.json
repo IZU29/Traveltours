@@ -1,0 +1,30 @@
+[
+    {
+        "name": "Singapore Station",
+        "locationImage": "https://res.cloudinary.com/dahbtrplg/image/upload/v1730371595/andre-benz-Mn9Fa_wQH-M-unsplash_xl6ulc.jpg",
+        "rating": 5,
+        "location": "Singapore",
+        "price": 99
+    },
+    {
+        "name": "Burj-Khalifa",
+        "locationImage": "https://res.cloudinary.com/dahbtrplg/image/upload/v1730371582/darcey-beau-vtK31JoeAFk-unsplash_w08whe.jpg",
+        "rating": 5,
+        "location": "UAE",
+        "price": 199
+    },
+    {
+        "name": "Westminister Bridge",
+        "locationImage": "https://res.cloudinary.com/dahbtrplg/image/upload/v1730371551/eric-marty-IZunjrb3soo-unsplash_fxzueq.jpg",
+        "rating": 5,
+        "location": "Singapore",
+        "price": 99
+    },
+    {
+        "name": "New-York's finest",
+        "locationImage": "https://res.cloudinary.com/dahbtrplg/image/upload/v1730371525/all-bong-L2oedF1AsH8-unsplash_gupnzh.jpg",
+        "rating": 5,
+        "location": "New York",
+        "price": 99
+    }
+]
