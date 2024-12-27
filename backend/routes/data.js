@@ -2,6 +2,6 @@ const Express =  require('express')
 const router = Express.Router()
 const {createReview} = require('../controllers/data')
 
-router.route('/create').post(createReview)
+router.route('/data').get(createReview)
 
 module.exports = router

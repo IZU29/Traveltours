@@ -4,10 +4,10 @@ const dataSchema = new mongoose.Schema({
         type : 'String',
         required: [true , 'Please Provide Creator ID']
     },
-    review:{
-        type: 'String',
-        required: [true , 'Please Provide review']
-    },
+    // review:{
+    //     type: 'String',
+    //     required: [true , 'Please Provide review']
+    // },
     name:{
         type: 'String',
         required: [true , 'Please Provide a Name']

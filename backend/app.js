@@ -11,8 +11,8 @@ require('dotenv').config()
 
 app.use(express.json())
 app.use('/api/user' , userRoute)
-app.use('/api' , locationRoute)
-app.use('/api/review' , authentication , dataRoute)
+app.use('/api/location' , locationRoute)
+app.use('/api' , authentication , dataRoute)
 
 const port = process.env.PORT || 5000 
 async function Start(){

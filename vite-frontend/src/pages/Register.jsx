@@ -1,8 +1,13 @@
 import React from 'react'
 import { FaCircleUser } from "react-icons/fa6"
 import loginPic from '../undraw_Sign_up_n6im-removebg.png'
-
+import {useNavigate} from 'react-router-dom'
 const Register = () => {
+  const navigate = useNavigate()
+
+  const submitDetails = () => {
+    navigate('/')
+  }
   return (
     <div className="flex border-green-500 h-[60vh] w-1/2 m-auto shadow-2xl rounded-sm my-10">
     <div className="flex  border-red-500 bg-white w-1/2">
@@ -16,7 +21,7 @@ const Register = () => {
     <input type="text" name="" id="" className='outline-none bg-white rounded-md w-4/5 p-2 border-none' placeholder='User'/>
     <input type="text" name="" id="" className='outline-none bg-white rounded-md w-4/5 p-2 border-none' placeholder='Email'/>
     <input type="password" name="" id="" className='outline-none bg-white rounded-md w-4/5 p-2 border-none' placeholder='Password'/>
-    <button type="submit" className='bg-black w-3/5 p-2 rounded-md text-white'>Submit</button>
+    <button type="submit" className='bg-black w-3/5 p-2 rounded-md text-white' onClick={() => submitDetails()}>Submit</button>
     </div>
 </div>
   )
