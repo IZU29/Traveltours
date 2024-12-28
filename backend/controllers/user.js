@@ -13,7 +13,7 @@ const Register = async (req, res) => {
     const salt = await bcrypt.genSalt(10)
     const hashPass = await bcrypt.hash(password , salt)
     const hashUser = {username , email , password : hashPass}
-    console.log({username , password})
+    console.log({username , password ,email})
     const user = await User.create(hashUser)
     const token = jwt.sign({name: user.username , id: user._id} , process.env.JWT_SECRET ,{expiresIn : '30d'})
     req.user = token
