@@ -11,7 +11,11 @@ const Register = () => {
   const submitDetails = () => {
     // navigate('/')
     const data = {username ,email ,password}
-    axios.post('http://localhost:5000/api/user/register' , data)
+    const response = axios.post('http://localhost:5000/api/user/register' , data)
+    let token;
+    response.then(response => {
+      localStorage.setItem('token' , (`Bearer ${response.data.token}`))
+    })
     // window.alert('working buttons')
     // console.log({username ,email ,password})
   }
