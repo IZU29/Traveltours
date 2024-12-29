@@ -4,9 +4,11 @@ import { CiLocationOn } from "react-icons/ci"
 import { TbLocation , TbRouteSquare} from "react-icons/tb";
 import { MdPeopleAlt } from "react-icons/md"
 import { TiWeatherPartlySunny } from "react-icons/ti"
+import {useNavigate} from 'react-router-dom'
 // import Svglogin from './undraw_sign_up_n6im.svg'
 import Man from './assets/images/pexels-italo-melo-881954-2379004-removebg-preview.png'
 const Main = () => {
+ 
   return (
     <div className="flex flex-col ">
       <div className="flex w-3/4 m-auto h-[300px]">

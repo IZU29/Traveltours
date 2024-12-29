@@ -12,8 +12,8 @@ const Register = () => {
     // navigate('/')
     const data = {username ,email ,password}
     axios.post('http://localhost:5000/api/user/register' , data)
-    window.alert('working buttons')
-    console.log({username ,email ,password})
+    // window.alert('working buttons')
+    // console.log({username ,email ,password})
   }
   return (
     <div className="flex border-green-500 h-[60vh] w-1/2 m-auto shadow-2xl rounded-sm my-10">
