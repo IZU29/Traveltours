@@ -41,6 +41,16 @@ const updateLocation = async (req , res) => {
     console.log(error)
     }
 }
+const deleteLocation = async (req , res) => {
+    try{
+    const {id} = req.params
+    const locationData = await Location.findByIdAndDelete(id)
+    res.status(200).json({msg: "successful" , data  : locationData})
+}
+    catch(error){
+    console.log(error)
+    }
+}
 
 const getSinglelocation = async (req ,res) => {
     try {
@@ -53,5 +63,5 @@ const getSinglelocation = async (req ,res) => {
     }
 }
 module.exports = {
-    getAllLocation , createLocation , updateLocation , getSinglelocation
+    getAllLocation , createLocation , updateLocation , getSinglelocation , deleteLocation
 }
