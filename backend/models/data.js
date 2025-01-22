@@ -1,17 +1,50 @@
 const mongoose =  require('mongoose')
 const dataSchema = new mongoose.Schema({
-    createdBy:{
-        type : 'String',
-        required: [true , 'Please Provide Creator ID']
-    },
-    // review:{
-    //     type: 'String',
-    //     required: [true , 'Please Provide review']
-    // },
-    name:{
-        type: 'String',
-        required: [true , 'Please Provide a Name']
-    }
+    title: {
+        type: String,
+        required: true,
+        unique: true,
+      },
+      city: {
+        type: String,
+        required: true,
+      },
+      address: {
+        type: String,
+        required: true,
+      },
+      distance: {
+        type: Number,
+        required: true,
+      },
+      photo: {
+        type: String,
+        required: true,
+      },
+      desc: {
+        type: String,
+        required: true,
+      },
+      price: {
+        type: Number,
+        required: true,
+      },
+      maxGroupSize: {
+        type: Number,
+        required: true,
+      },
+  
+      reviews: [
+        {
+          type: mongoose.Types.ObjectId,
+          ref: "Review",
+        },
+      ],
+  
+      featured: {
+        type: Boolean,
+        default: false,
+      },
 } , {timestamps : true})
 
 module.exports = new mongoose.model('data' , dataSchema)

@@ -1,25 +1,52 @@
 const mongoose = require('mongoose')
 const Locate =  new mongoose.Schema({
-    name:{
-        type: 'String',
-        required: [true , 'Please Provide a Name']
+    title: {
+        type: String,
+        required: true,
+        unique: true,
+      },
+      city: {
+        type: String,
+        required: true,
+      },
+      address: {
+        type: String,
+        required: true,
+      },
+      distance: {
+        type: Number,
+        required: true,
+      },
+      photo: {
+        type: String,
+        required: true,
+      },
+      desc: {
+        type: String,
+        required: true,
+      },
+      price: {
+        type: Number,
+        required: true,
+      },
+      maxGroupSize: {
+        type: Number,
+        required: true,
+      },
+  
+      reviews: [
+        {
+          type: mongoose.Types.ObjectId,
+          ref: "Review",
+        },
+      ],
+  
+      featured: {
+        type: Boolean,
+        default: false,
+      },
     },
-    locationImage:{
-        type: 'String',
-        required : [true , 'Please Provide an Image URL']
-    },
-    rating:{
-        type: 'Number',
-        required: [true , 'Please Provide a rating']
-    },
-    location:{
-        type: 'String',
-        required : [true , 'Please Provide a Location']
-    },
-    price:{
-        type: 'Number',
-        required : [true , 'Please Provide a Price']
-    }
-})
+      { timestamps: true }
+)
 
 module.exports = mongoose.model('location' , Locate)

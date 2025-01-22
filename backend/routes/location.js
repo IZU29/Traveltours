@@ -1,7 +1,9 @@
 const express = require('express')
 const router = express.Router()
-const {getAllLocation} = require('../controllers/location')
+const {getAllLocation , createLocation ,updateLocation ,getSinglelocation} = require('../controllers/location')
 
-router.route('/').get(getAllLocation)
+router.route('/').get(getAllLocation).post(createLocation)
+router.route('/:id').put(updateLocation).get(getSinglelocation)
+
 
 module.exports = router
