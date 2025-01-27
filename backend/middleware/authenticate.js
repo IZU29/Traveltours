@@ -2,17 +2,18 @@ const jwt = require('jsonwebtoken')
 
 const authenticate = (req , res , next) => {
    try { 
-    const authHeader = req.headers.authorization
-    const token = authHeader.split(' ')[1]
+       // const token = authHeader
+       const token= req.cookies.accesstoken
+    // console.log(token)
+    // const Decoder =  jwt.verify(token, process.env.JWT_SECRET)
+    // // const { user }  = req
+    // req.user = {userId : Decoder.id  , userName: Decoder.name}
     console.log(token)
-    const Decoder =  jwt.verify(token, process.env.JWT_SECRET)
-    // const { user }  = req
-    req.user = {userId : Decoder.id  , userName: Decoder.name}
     next()
     // jwt.verify
     }
     catch(error){
-        console.log(error)
+        res.status(500).json({status : 'failed' , message : "There was an error somewhere !!!"})
     }
 }
 
