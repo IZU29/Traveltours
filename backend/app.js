@@ -15,7 +15,7 @@ const authentication = require('./middleware/authenticate')
 
 app.use(express.json())
 app.use(cors());
-// app.use(cookieParser())
+app.use(cookieParser())
 app.use('/api' , utilRoute)
 app.use('/api/user', authentication ,userRoute)
 app.use('/api/location' , locationRoute)

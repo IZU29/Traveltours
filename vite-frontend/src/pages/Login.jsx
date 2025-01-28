@@ -13,6 +13,7 @@ const Login = () => {
     const response = axios.post('http://localhost:5000/api/login' , data)
     let token;
     response.then(response => {
+      console.log(response)
       localStorage.setItem('token' , (response.data.token))
     })
     // window.alert('working buttons')
@@ -21,7 +22,7 @@ const Login = () => {
   return (
     <div className="flex border-green-500 h-[60vh] w-1/2 m-auto shadow-2xl rounded-sm my-10">
         <div className="flex  border-red-500 bg-white w-1/2">
-        <img src={loginPic} alt="" srcset="" />
+        <img src={loginPic} alt="" srcSet="" />
         </div>
         <div className="flex bg-orange-400 flex-col h-full w-1/2 items-center justify-between p-4 ">
         <div className="text-xl text-white">
